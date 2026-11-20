@@ -1,0 +1,5 @@
+ignore-reads:
+  - dist/**
+  - apps/**/dist/**
+  - packages/**/dist/**
+  - tools/**/dist/**
