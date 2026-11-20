@@ -1,9 +1,10 @@
 import { defineConfig } from 'vite';
+import { nxReadySignal } from '@nx/vite/plugins/nx-ready-signal.plugin';
 
 export default defineConfig(() => ({
   root: import.meta.dirname,
   cacheDir: '../../../node_modules/.vite/packages/shop/util-math-name',
-  plugins: [],
+  plugins: [nxReadySignal()],
   test: {
     name: '@org/shop-util-math-name',
     watch: false,

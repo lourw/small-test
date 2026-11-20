@@ -1,10 +1,11 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { nxReadySignal } from '@nx/vite/plugins/nx-ready-signal.plugin';
 
 export default defineConfig(() => ({
   root: import.meta.dirname,
   cacheDir: '../../../node_modules/.vite/packages/shop/ui-inputs-stat',
-  plugins: [react()],
+  plugins: [react(), nxReadySignal()],
   test: {
     name: '@org/shop-ui-inputs-stat',
     watch: false,
