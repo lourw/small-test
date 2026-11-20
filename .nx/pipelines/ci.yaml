@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=https://cloud.nx.app/nx-cloud/static/schemas/workflow.schema.json
+on:
+  pull-requests:
+    event: PR
+    branches: ['main']
+  pushes:
+    event: PUSH
+    branches: ['main']
+
+jobs:
+  main:
+    runs-on: linux-medium-js
+    workers:
+      scheduling-constraints:
+        - targets: ['e2e-ci--**/**']
+          cannot-run-with:
+            - targets: ['e2e-ci--**/**']
+    steps:
+      - name: Run affected tasks
+        run: npx nx affected -t lint test build e2e-ci

@@ -1,0 +1,88 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "outDir": "out-tsc/playwright",
+    "sourceMap": false,
+    "types": ["node"]
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.js",
+    "playwright.config.ts",
+    "src/**/*.spec.ts",
+    "src/**/*.spec.js",
+    "src/**/*.test.ts",
+    "src/**/*.test.js",
+    "src/**/*.d.ts"
+  ],
+  "exclude": [
+    "out-tsc",
+    "test-output",
+    "eslint.config.js",
+    "eslint.config.mjs",
+    "eslint.config.cjs"
+  ],
+  "references": [
+    {
+      "path": "../../packages/shop/feature-subscriptions-overview"
+    },
+    {
+      "path": "../../packages/shop/feature-store-locator-overview"
+    },
+    {
+      "path": "../../packages/shop/feature-sizing-overview"
+    },
+    {
+      "path": "../../packages/shop/feature-search-overview"
+    },
+    {
+      "path": "../../packages/shop/feature-reviews-overview"
+    },
+    {
+      "path": "../../packages/shop/feature-returns-overview"
+    },
+    {
+      "path": "../../packages/shop/feature-promotions-overview"
+    },
+    {
+      "path": "../../packages/shop/feature-profile-overview"
+    },
+    {
+      "path": "../../packages/shop/feature-preorders-overview"
+    },
+    {
+      "path": "../../packages/shop/feature-payments-overview"
+    },
+    {
+      "path": "../../packages/shop/feature-orders-overview"
+    },
+    {
+      "path": "../../packages/shop/feature-notifications-overview"
+    },
+    {
+      "path": "../../packages/shop/feature-loyalty-overview"
+    },
+    {
+      "path": "../../packages/shop/feature-inventory-overview"
+    },
+    {
+      "path": "../../packages/shop/feature-compare-overview"
+    },
+    {
+      "path": "../../packages/shop/feature-checkout-overview"
+    },
+    {
+      "path": "../../packages/shop/feature-catalog-overview"
+    },
+    {
+      "path": "../../packages/shop/feature-cart-overview"
+    },
+    {
+      "path": "../../packages/shop/feature-analytics-overview"
+    },
+    {
+      "path": "../../packages/shop/feature-addresses-overview"
+    }
+  ]
+}

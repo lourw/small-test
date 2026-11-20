@@ -1,0 +1,66 @@
+{
+  "name": "@org/shop",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "projectType": "application",
+    "tags": [
+      "scope:shop"
+    ],
+    "targets": {
+      "serve": {
+        "dependsOn": [
+          "@org/api:serve"
+        ]
+      },
+      "dev": {
+        "dependsOn": [
+          "@org/api:serve"
+        ]
+      },
+      "preview": {
+        "dependsOn": [
+          "build",
+          "@org/api:serve"
+        ]
+      }
+    }
+  },
+  "devDependencies": {
+    "@org/models": "*",
+    "@org/shop-data": "*",
+    "@org/shop-feature-account-overview": "*",
+    "@org/shop-feature-addresses-overview": "*",
+    "@org/shop-feature-analytics-overview": "*",
+    "@org/shop-feature-auth-overview": "*",
+    "@org/shop-feature-bundles-overview": "*",
+    "@org/shop-feature-cart-overview": "*",
+    "@org/shop-feature-catalog-overview": "*",
+    "@org/shop-feature-checkout-overview": "*",
+    "@org/shop-feature-compare-overview": "*",
+    "@org/shop-feature-feedback-overview": "*",
+    "@org/shop-feature-gift-cards-overview": "*",
+    "@org/shop-feature-inventory-overview": "*",
+    "@org/shop-feature-loyalty-overview": "*",
+    "@org/shop-feature-notifications-overview": "*",
+    "@org/shop-feature-orders-overview": "*",
+    "@org/shop-feature-payments-overview": "*",
+    "@org/shop-feature-preorders-overview": "*",
+    "@org/shop-feature-product-detail": "*",
+    "@org/shop-feature-products": "*",
+    "@org/shop-feature-profile-overview": "*",
+    "@org/shop-feature-promotions-overview": "*",
+    "@org/shop-feature-recommendations-overview": "*",
+    "@org/shop-feature-returns-overview": "*",
+    "@org/shop-feature-reviews-overview": "*",
+    "@org/shop-feature-search-overview": "*",
+    "@org/shop-feature-shipping-overview": "*",
+    "@org/shop-feature-sizing-overview": "*",
+    "@org/shop-feature-store-locator-overview": "*",
+    "@org/shop-feature-subscriptions-overview": "*",
+    "@org/shop-feature-support-overview": "*",
+    "@org/shop-feature-tracking-overview": "*",
+    "@org/shop-feature-wishlist-overview": "*",
+    "@org/shop-shared-ui": "*"
+  }
+}
