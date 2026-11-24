@@ -18,7 +18,9 @@
     {
       "plugin": "@nx/js/typescript",
       "options": {
-        "typecheck": { "targetName": "typecheck" },
+        "typecheck": {
+          "targetName": "typecheck"
+        },
         "build": {
           "targetName": "build",
           "configName": "tsconfig.lib.json",
@@ -38,7 +40,12 @@
         "buildDepsTargetName": "build-deps"
       }
     },
-    { "plugin": "@nx/eslint/plugin", "options": { "targetName": "lint" } },
+    {
+      "plugin": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    },
     {
       "plugin": "@nx/vite/plugin",
       "options": {
@@ -54,17 +61,30 @@
     },
     {
       "plugin": "@nx/playwright/plugin",
-      "options": { "targetName": "e2e" }
+      "options": {
+        "targetName": "e2e"
+      }
     },
     {
       "plugin": "@nx/js/typescript",
       "include": ["packages/shared/models/*"],
-      "options": { "typecheck": { "targetName": "typecheck" } }
+      "options": {
+        "typecheck": {
+          "targetName": "typecheck"
+        }
+      }
     },
-    { "plugin": "@nx/vitest", "options": { "testTargetName": "test" } }
+    {
+      "plugin": "@nx/vitest",
+      "options": {
+        "testTargetName": "test"
+      }
+    }
   ],
   "targetDefaults": {
-    "test": { "dependsOn": ["^build"] },
+    "test": {
+      "dependsOn": ["^build"]
+    },
     "@nx/esbuild:esbuild": {
       "cache": true,
       "dependsOn": ["^build"],
@@ -84,7 +104,9 @@
         "linter": "eslint",
         "bundler": "vite"
       },
-      "component": { "style": "css" },
+      "component": {
+        "style": "css"
+      },
       "library": {
         "style": "css",
         "linter": "eslint",
@@ -94,8 +116,9 @@
   },
   "analytics": false,
   "bust": 321,
-  "nxCloudId": "6af7876e584cdb844849048e",
+  "nxCloudId": "6b05ffe5fd605ba7e931f40e",
   "affected": {
     "legacy": true
-  }
+  },
+  "nxCloudUrl": "https://snapshot.nx.app"
 }
