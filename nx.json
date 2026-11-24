@@ -116,9 +116,9 @@
   },
   "analytics": false,
   "bust": 321,
-  "nxCloudId": "6b05ffe5fd605ba7e931f40e",
   "affected": {
     "legacy": true
   },
-  "nxCloudUrl": "https://snapshot.nx.app"
+  "nxCloudId": "6b060202a4b38663bb9542d8",
+  "nxCloudUrl": "https://cloud.nx.app"
 }
