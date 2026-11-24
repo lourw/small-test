@@ -9,6 +9,9 @@ on:
 
 ultracache: .nx/pipelines/ultracache-config.yaml
 
+env:
+  NX_CLOUD_PACKING_WORK_CURVE_ADMISSION: 'true'
+
 jobs:
   main:
     runs-on: linux-medium-js
