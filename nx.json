@@ -116,7 +116,7 @@
     }
   },
   "analytics": false,
-  "bust": 400,
+  "bust": 401,
   "affected": {
     "legacy": true
   },
