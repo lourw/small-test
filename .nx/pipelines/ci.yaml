@@ -9,8 +9,11 @@ on:
 
 ultracache: .nx/pipelines/ultracache-config.yaml
 
+
 env:
   NX_CLOUD_PACKING_WORK_CURVE_ADMISSION: 'true'
+  NX_CLOUD_VERBOSE_LOGGING: 'true'
+  NX_CLOUD_LOG_VM_CAPACITY: 'true'
 
 jobs:
   main:
@@ -23,3 +26,5 @@ jobs:
     steps:
       - name: Run all tasks
         run: npx nx run-many -t lint test build e2e-ci
+      - name: Print main-job worker log
+        run: find ~/.nx -path '*main-job-workers/*/worker.log' -exec cat {} +
