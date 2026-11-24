@@ -21,5 +21,5 @@ jobs:
           cannot-run-with:
             - targets: ['e2e-ci--**/**']
     steps:
-      - name: Run affected tasks
-        run: npx nx affected -t lint test build e2e-ci
+      - name: Run all tasks
+        run: npx nx run-many -t lint test build e2e-ci
